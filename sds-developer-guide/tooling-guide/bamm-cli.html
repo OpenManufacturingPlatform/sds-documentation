@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>BAMM CLI :: Open Manufacturing Platform - Semantic Data Structuring Working Group</title>
-    <link rel="canonical" href="https://openmanufacturingplatform.github.io/sds-documentation/sds-developer-guide/dev-snapshot/tooling-guide/bamm-cli.html">
+    <link rel="canonical" href="https://openmanufacturingplatform.github.io/sds-documentation/sds-developer-guide/tooling-guide/bamm-cli.html">
     <meta name="generator" content="Antora 2.3.4">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-    <script>var uiRootPath = '../../../_'</script>
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
   </head>
   <body class="article">
 <header class="header">
@@ -15,7 +15,7 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="https://openmanufacturingplatform.github.io/sds-documentation">
         <div class="logo-headline-wrapper">
-          <img class="logo" src="../../../_/img/omp-logo.png" />
+          <img class="logo" src="../../_/img/omp-logo.png" />
           <span class="docu-title">
             Open Manufacturing Platform - Semantic Data Structuring Working Group
           </span>
@@ -36,7 +36,7 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="sds-developer-guide" data-version="dev-snapshot">
+<div class="nav-container" data-component="sds-developer-guide" data-version="master">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -53,6 +53,15 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="java-aspect-tooling.html">Java Tooling for Aspect Models</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Java Build Tooling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="maven-plugin.html">Maven Plugin</a>
+  </li>
+</ul>
+  </li>
 </ul>
   </li>
 </ul>
@@ -61,28 +70,28 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">SDS SDK Developer Guide</span>
-    <span class="version">dev-snapshot</span>
+    <span class="version">master</span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../bamm-specification/snapshot/index.html">BAMM Aspect Meta Model</a>
+      <a class="title" href="../../bamm-specification/snapshot/index.html">BAMM Aspect Meta Model</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../bamm-specification/snapshot/index.html">snapshot</a>
+          <a href="../../bamm-specification/snapshot/index.html">snapshot</a>
         </li>
         <li class="version">
-          <a href="../../../bamm-specification/2.0.0-M1/index.html">2.0.0-M1</a>
+          <a href="../../bamm-specification/2.0.0-M1/index.html">2.0.0-M1</a>
         </li>
         <li class="version">
-          <a href="../../../bamm-specification/v1.0.0/index.html">v1.0.0</a>
+          <a href="../../bamm-specification/v1.0.0/index.html">v1.0.0</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../sds-documentation/index.html">SDS Documentation</a>
+      <a class="title" href="../../sds-documentation/index.html">SDS Documentation</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../sds-documentation/index.html">master</a>
+          <a href="../../sds-documentation/index.html">master</a>
         </li>
       </ul>
     </li>
@@ -90,13 +99,25 @@
       <a class="title" href="../index.html">SDS SDK Developer Guide</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">dev-snapshot</a>
+          <a href="../index.html">master</a>
         </li>
         <li class="version">
-          <a href="../../1.0.1/index.html">1.0.1</a>
+          <a href="../1.1.0-M3/index.html">1.1.0-M3</a>
         </li>
         <li class="version">
-          <a href="../../1.0.0/index.html">1.0.0</a>
+          <a href="../1.1.0-M2/index.html">1.1.0-M2</a>
+        </li>
+        <li class="version">
+          <a href="../1.1.0-M1/index.html">1.1.0-M1</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.1/index.html">1.0.1</a>
+        </li>
+        <li class="version">
+          <a href="../1.0.0/index.html">1.0.0</a>
         </li>
       </ul>
     </li>
@@ -108,7 +129,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../sds-documentation/index.html" class="home-link"></a>
+  <a href="../../sds-documentation/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">SDS SDK Developer Guide</a></li>
@@ -117,11 +138,15 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">dev-snapshot</button>
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
-    <a class="version is-current" href="bamm-cli.html">dev-snapshot</a>
-    <a class="version" href="../../1.0.1/tooling-guide/bamm-cli.html">1.0.1</a>
-    <a class="version" href="../../1.0.0/tooling-guide/bamm-cli.html">1.0.0</a>
+    <a class="version is-current" href="bamm-cli.html">master</a>
+    <a class="version" href="../1.1.0-M3/tooling-guide/bamm-cli.html">1.1.0-M3</a>
+    <a class="version" href="../1.1.0-M2/tooling-guide/bamm-cli.html">1.1.0-M2</a>
+    <a class="version" href="../1.1.0-M1/tooling-guide/bamm-cli.html">1.1.0-M1</a>
+    <a class="version" href="../1.0.2/tooling-guide/bamm-cli.html">1.0.2</a>
+    <a class="version" href="../1.0.1/tooling-guide/bamm-cli.html">1.0.1</a>
+    <a class="version" href="../1.0.0/tooling-guide/bamm-cli.html">1.0.0</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/OpenManufacturingPlatform/sds-sdk/edit/main/documentation/developer-guide/modules/tooling-guide/pages/bamm-cli.adoc">Edit this Page</a></div>
@@ -145,7 +170,7 @@
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Download latest version: <span class="icon"><i class="fa fa-download"></i></span> <a href="https://github.com/OpenManufacturingPlatform/sds-sdk/releases/download/v1.0.1/bamm-cli-1.0.1.jar">bamm-cli-1.0.1.jar</a>
+Download latest version: <span class="icon"><i class="fa fa-download"></i></span> <a href="https://github.com/OpenManufacturingPlatform/sds-sdk/releases/download/v1.0.2/bamm-cli-1.0.2.jar">bamm-cli-1.0.2.jar</a>
 </td>
 </tr>
 </table>
@@ -160,7 +185,7 @@ Download latest version: <span class="icon"><i class="fa fa-download"></i></span
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.1.jar -i <em>AspectModel.ttl</em> <em>switch</em></code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.2.jar -i <em>AspectModel.ttl</em> <em>switch</em></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -263,6 +288,15 @@ Download latest version: <span class="icon"><i class="fa fa-download"></i></span
   <a href="https://github.com/FasterXML/jackson">Jackson</a> Annotations.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--execute-library-macros</code> or <code>-elm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-java</code> or <code>-static-java</code> and lead to generated Java code which includes the output from the custom macros provided via <code>-tlp</code> and <code>-tlfn</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--template-library-file</code> or <code>-tlf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The path and name of the template file containing custom macros.
+It is used together with <code>-elm</code>.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>--use-semantic-api-version</code> or <code>-sv</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> in order to use
   the complete semantic version of the Aspect Model as the version of the Aspect API.</p></td>
@@ -340,7 +374,7 @@ and then the <code>--aspect-parameter-file</code> defines the parameter resource
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.1.jar -i <em>AspectModel.ttl</em> -oapi-yaml -baseUrl "https://www.example.org"
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.2.jar -i <em>AspectModel.ttl</em> -oapi-yaml -baseUrl "https://www.example.org"
 -arp "/resources/{resourceId}" -apf <em>fileLocation</em></code></pre>
 </div>
 </div>
@@ -351,7 +385,7 @@ and then the <code>--aspect-parameter-file</code> defines the parameter resource
 <div class="sectionbody">
 <div class="paragraph">
 <p>An Aspect model file can contain an Aspect definition as well as other model elements that are defined in the same
-versioned namespace, as described in the <a href="../../../bamm-specification/snapshot/namespaces.html" class="page">Namespaces section of the
+versioned namespace, as described in the <a href="../../bamm-specification/snapshot/namespaces.html" class="page">Namespaces section of the
 specification</a>. Additionally, it is possible to split one versioned namespace across multiple files, for example to
 define a Characteristic that is usable in multiple Aspects into its own file. In order for BAMM CLI to be able
 to resolve references to such externally defined model elements, the model files must be organized in a directory
@@ -392,10 +426,10 @@ should therefore have an empty prefix declaration such as <code>@prefix : &lt;ur
   <p>This page was built using the Antora default UI.</p>
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.min.js"></script>
-<script src="../../../_/js/vendor/search.js" id="search-script" data-base-path="../../.." data-page-path="/sds-developer-guide/dev-snapshot/tooling-guide/bamm-cli.html"></script>
-<script async src="../../../_/../search-index.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.min.js"></script>
+<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/sds-developer-guide/tooling-guide/bamm-cli.html"></script>
+<script async src="../../_/../search-index.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
   </body>
 </html>
