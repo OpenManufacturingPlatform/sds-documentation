@@ -361,15 +361,20 @@ addition to the general attributes, every Aspect Model element has the following
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm:properties</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Properties of this Aspect. The attribute must be present, but the
-  list may be empty.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check-circle fa-2x"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Properties of this Aspect. Leaving out this
+  attribute completely is equivalent to having it present with an empty list as value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times-circle fa-2x"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm:operations</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Operations of this Aspect. The attribute must be present, but the
-  list may be empty.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check-circle fa-2x"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Operations of this Aspect. Leaving out this
+  attribute completely is equivalent to having it present with an empty list as value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times-circle fa-2x"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm:events</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Events of this Aspect.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times-circle fa-2x"></i></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -967,6 +972,50 @@ i.e., that the deconstruction rule actually does what the model author intended.
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="using-unit-reference"><a class="anchor" href="#using-unit-reference"></a>Using Unit Reference</h4>
+<div class="paragraph">
+<p>As explained in the section <a href="#declaring-quantifiable-values-and-measurements">Declaring Quantifiables and Measurements</a>, some values only make sense when they also have a unit assigned to them.
+This unit definition is in many cases fixed at design time, does not change thereafter and therefore at runtime (in the JSON payload for example), only the actual value is transported.<br>
+ There may be scenarios, however, where this permanent fixation on a specific unit might not be sufficient because the unit can only be determined dynamically
+at runtime, or is a kind of configuration parameter which must be set when the system is being deployed/starting up. In cases like this, a <a href="characteristics.html#unit-reference-characteristic" class="page">UnitReference</a> characteristic instance can be used to include a dynamic reference to the desired unit from the <a href="appendix/appendix.html#unit-catalog" class="page">Unit catalog</a> and this information is then always included in the payload. The runtime payload refers to the unit using its <code>bamm:curie</code>, i.e., the unit&#8217;s URN&#8217;s element name prefixed with <code>unit:</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example an Aspect with the following model:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">:ValueWithDynamicUnit a bamm:Aspect ;
+  bamm:name "ValueWithDynamicUnit";
+  bamm:properties ( :value :unit ) ;
+  bamm:operations ( ) .
+
+:value a bamm:Property ;
+   bamm:name "value" ;
+   bamm:exampleValue "2.25"^^xsd:float ;
+   bamm:characteristic :Float .
+
+:Float a bamm:Characteristic ;
+   bamm:name "Float" ;
+   bamm:dataType xsd:float .
+
+:unit a bamm:Property ;
+   bamm:name "unit";
+   bamm:characteristic bamm-c:UnitReference .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>can produce a JSON payload that could look something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "value" : 2.25,
+  "unit" : "unit:hectopascal"
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="declaring-constraints"><a class="anchor" href="#declaring-constraints"></a>Declaring Constraints and Traits</h3>
@@ -993,11 +1042,11 @@ Constraint as a <code>bamm-c:constraint</code> to the Trait:</p>
 <pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">:numbers a bamm:Property ;
    bamm:characteristic [
      a bamm-c:Trait ;
+     bamm-c:baseCharacteristic :NumberList ;
      bamm-c:constraint [
        a bamm-c:LengthConstraint ;
        bamm:description "Limits the number list to 10 elements"@en ;
        bamm-c:maxValue "10"^^xsd:nonNegativeInteger ;
-       bamm-c:baseCharacteristic :NumberList ;
      ]
    ]  .
 
@@ -1090,8 +1139,9 @@ When writing the <code>bamm:value</code>, backslashes (<code>\</code>) need to b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm:properties</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Properties which make up the Entity</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check-circle fa-2x"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of Properties which make up the Entity. Leaving out this
+  attribute completely is equivalent to having it present with an empty list as value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times-circle fa-2x"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm:extends</code></p></td>
@@ -1143,8 +1193,10 @@ must be unique across the entire Entity inheritance chain. Otherwise the corresp
 <div class="sect3">
 <h4 id="declaring-abstract-entities"><a class="anchor" href="#declaring-abstract-entities"></a>Declaring Abstract Entities</h4>
 <div class="paragraph">
-<p>It is also possible to declare Abstract Entities to share Properties across multiple Entities. An Abstract Entity must
-be extended by one or more Entities.</p>
+<p>In contrast to Entities, Abstract Entities cannot directly be used as data types.
+The main use case for Abstract Entities is to share Properties across multiple Entities.
+This can be achieved through inheritance: Abstract Entities can extend other Entities and Abstract Entities and can
+themselves be extended in a manner not dissimilar to how abstract classes are used in many programming languages.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>

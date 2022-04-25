@@ -160,8 +160,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The BAMM CLI is a command line tool for the validation of Aspect models and the generation of artifacts, such as
- documentation or code, from Aspect models.</p>
+<p>The BAMM CLI is a command line tool for the validation of Aspect models and the generation of artifacts, such as documentation or code, from Aspect models.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -181,161 +180,242 @@ Download latest version: <span class="icon"><i class="fa fa-download"></i></span
 <h2 id="bamm-cli-getting-started"><a class="anchor" href="#bamm-cli-getting-started"></a>Running the BAMM CLI</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The basic way to run the tool is as follows:</p>
+<p>For the executable jar, call <code>java -jar bamm-cli-1.0.2.jar</code> followed by one of the following subcommands (e.g., <code>java -jar bamm-cli-1.0.2.jar help</code>).
+In the following sections, <code>bamm</code> will be used as the command name.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To make <code>bamm-cli</code> easier to call, you can add an alias to the configuration of the shell of your choice.
+For example, for Bash, you could add the following line to <code>.bashrc</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.2.jar -i <em>AspectModel.ttl</em> <em>switch</em></code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">alias bamm='java -jar /location/to/bamm-cli-1.0.2.jar'</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>where <em>switch</em> is one of the following:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Switch</th>
-<th class="tableblock halign-left valign-top">Description</th>
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--validate</code> or <code>-v</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validate the Aspect model</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-documentation</code> or <code>-html</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate HTML documentation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-dot-diagram</code> or <code>-dot</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate diagram in <a href="https://www.graphviz.org/">Graphviz/DOT</a> format</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-java-classes</code> or <code>-java</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate Java domain classes (POJOs)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-json-payload</code> or <code>-json</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate sample JSON payload</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-json-schema</code> or <code>-schema</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate JSON Schema</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-openapi-json</code> or <code>-oapi-json</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate OpenAPI JSON specification for an Aspect Model</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-openapi-yaml</code> or <code>-oapi-yaml</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate OpenAPI YAML specification for an Aspect Model</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-png-diagram</code> or <code>-png</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate diagram in PNG format</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-static-java-classes</code> or <code>-static-java</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate static meta classes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate-svg-diagram</code> or <code>-svg</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate diagram in SVG format</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--migrate</code> or <code>-m</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Automatically migrate an Aspect model to the latest Meta Model version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--pretty-print</code> or <code>-p</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Print an Aspect model nicely formatted</p></td>
-</tr>
-</tbody>
 </table>
+</div>
 <div class="paragraph">
-<p>The following switches can be used in addition to the ones above to configure the generation:</p>
+<p>Successful execution of a command is signaled by returning 0. In case of logical or some other internal problem error code 1 is returned.
+Missing or wrong command parameters result in error code 2 being returned.</p>
+</div>
+<div class="paragraph">
+<p>To get help for a certain subcommand, add 'help' before the subcommand name or add <code>--help</code> to the end, e.g., <code>bamm help aspect</code>
+or <code>bamm aspect --help</code>.
+Each subcommand can have its own set of options which allow the user to further fine-tune the execution of the command.
+The available options and their meaning can also be seen in the help text of the individual subcommands.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 40%;">
-<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 30%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Switch</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description/Options</th>
+<th class="tableblock halign-left valign-top">Examples</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--output-directory</code> or <code>-d</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Set the directory where files are written, defaults to the current directory. This
-  applies to all switches that generate files.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get overview of all commands</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm help</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--package-name</code> or <code>-pn</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Set the package name for generated Java files. This applies to <code>-java</code> and <code>-static-java</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">help &lt;subcommand&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get help for a specific subcommand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm help aspect</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--disable-jackson-annotations</code> or <code>-dja</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is to be used together with <code>-java</code> or
-  <code>-static-java</code> and will lead to generated Java code that does not contain
-  <a href="https://github.com/FasterXML/jackson">Jackson</a> Annotations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">aspect help &lt;aspect subcommand&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get help for <code>aspect</code> subcommands</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect help validate</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--execute-library-macros</code> or <code>-elm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-java</code> or <code>-static-java</code> and lead to generated Java code which includes the output from the custom macros provided via <code>-tlp</code> and <code>-tlfn</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">aspect &lt;model&gt; validate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validate Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl validate</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--template-library-file</code> or <code>-tlf</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The path and name of the template file containing custom macros.
-It is used together with <code>-elm</code>.</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; prettyprint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pretty-print Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl prettyprint</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--use-semantic-api-version</code> or <code>-sv</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> in order to use
-  the complete semantic version of the Aspect Model as the version of the Aspect API.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : the output will be saved to the given file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl prettyprint -o c:\Results\PrettyPrinted.ttl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-api-base-url</code> or <code>-base-url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> to provide the
-  base URL for the Aspect API OpenAPI specification.</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; migrate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Migrate Aspect Model to the latest BAMM version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl migrate AspectModel.ttl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--include-aspect-query-api</code> or <code>-query-api</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> to include
-  the path for the Query Aspect API Endpoint in the OpenAPI specification.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : the output will be saved to the given file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl migrate AspectModel.ttl -o c:\Results\MigratedModel.ttl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-exclude-paging</code> or <code>-no-paging</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used to exclude the paging information in the OpenAPI specification. Paging is per default activated.</p></td>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to html</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate HTML documentation for an Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-time-based-paging</code> or <code>-atbp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used to set the used paging strategy as time-based paging.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : the output will be saved to the given file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html -o c:\Model.html</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-offset-based-paging</code> or <code>-aobp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used to set the used paging strategy as offset-based paging.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--css, -c</em> : CSS file with custom styles to be included in the generated HTML documentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html -c c:\styles.css</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-cursor-based-paging</code> or <code>-acbp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used to set the used paging strategy as cursor-based paging.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : The language from the model for which the HTML should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html -l de</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-resource-path</code> or <code>-arp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> to set the resource-path`
-  for the Aspect API endpoints.</p></td>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to png</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate PNG diagram for Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to png</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--aspect-parameter-file</code> or <code>-apf</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This option is used together with <code>-oapi-json</code> or <code>-oapi-yaml</code> to set a file including
-  the schema description for the resource. For JSON the description has to be in json, for YAML it has to be in YAML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : output file path (default: stdout); as PNG is a binary format, it is strongly recommended to output the result to a file by using the -o option or the console redirection operator '&gt;')</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : the language from the model for which the diagram should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to svg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate SVG diagram for Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : the output will be saved to the given file</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : the language from the model for which the diagram should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to dot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate <a href="https://graphviz.org/doc/info/lang.html">DOT</a> diagram for Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to dot</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : output file path (default: stdout)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : the language from the model for which the diagram should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">aspect &lt;model&gt; to java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate Java classes from an Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to java</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output-directory, -d</em> : output directory to write files to (default: current directory)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--package-name, -pn</em> : package to use for generated Java classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to java -pn org.company.product</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--no-jackson, -nj</em> : disable <a href="https://github.com/FasterXML/jackson">Jackson</a> annotation generation in generated Java classes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--template-library-file, -tlf</em> : the path and name of the <a href="https://velocity.apache.org/">Velocity</a> template file containing the macro library</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--execute-library-macros, -elm</em> : Execute the macros provided in the <a href="https://velocity.apache.org/">Velocity</a> macro library</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--static, -s</em> : generate Java domain classes for a Static Meta Model</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock">aspect &lt;model&gt; to openapi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate <a href="https://spec.openapis.org/oas/v3.0.3">OpenAPI</a> specification for an Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to openapi -j</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : output file path (default: stdout)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--api-base-url, -b</em> : the base url for the Aspect API used in the <a href="https://spec.openapis.org/oas/v3.0.3">OpenAPI</a> specification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to openapi -j -b http://mysite.de</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--json, -j</em> : generate a JSON specification for an Aspect Model (default format is YAML)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--parameter-file, -p</em> : the path to a file including the parameter for the Aspect API endpoints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For detailed description, see the section bellow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--semantic-version, -sv</em> : use the full semantic version from the Aspect Model as the version for the Aspect API</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--resource-path, -r</em> : the resource path for the Aspect API endpoints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For detailed description, see the section bellow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--include-query-api, -q</em> : include the path for the Query Aspect API Endpoint in the <a href="https://spec.openapis.org/oas/v3.0.3">OpenAPI</a> specification</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--paging-none, -pn</em> : exclude paging information for the Aspect API Endpoint in the <a href="https://spec.openapis.org/oas/v3.0.3">OpenAPI</a> specification</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--paging-cursor-based, -pc</em> : in case there is more than one paging possibility, it has to be cursor based paging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--paging-offset-based, -po</em> : in case there is more than one paging possibility, it has to be offset based paging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--paging-time-based, -pt</em> : in case there is more than one paging possibility, it has to be time based paging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; to json</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate OpenAPI JSON specification for an Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : output file path (default: stdout)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; to schema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate JSON schema for an Aspect Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to schema</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--output, -o</em> : output file path (default: stdout)</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -346,17 +426,18 @@ It is used together with <code>-elm</code>.</p></td>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Every specification is based on one Aspect, which needs a separately defined server URL where the given aspect will be.
-The URL will be defined as string with the <code>-base-url</code> command, i.e.: <a href="https://www.example.org" class="bare">https://www.example.org</a>.
-The default URL, using the above defined -base-url, would result in <a href="https://www.example.org/api/v1/{tenantId}/&lt;aspectName&gt" class="bare">https://www.example.org/api/v1/{tenantId}/&lt;aspectName&gt</a>;.
-By default the Aspect&#8217;s local name is used as path. The default path can be manipulated with the <code>--aspect-resource-path</code> switch.
-If the path is defined further, for example <code>--aspect-resource-path "/resources/{resourceId}"</code>, the resulting URL would be: <a href="https://www.example.org/api/v1/{tenantId}/resources/{resourceId}" class="bare">https://www.example.org/api/v1/{tenantId}/resources/{resourceId}</a>.</p>
+The URL will be defined as string with the <code>-b</code> option, i.e.: <a href="https://www.example.org" class="bare">https://www.example.org</a>.
+The default URL, using the above defined --api-base-url, would result in <a href="https://www.example.org/api/v1/{tenantId}/&lt;aspectName&gt" class="bare">https://www.example.org/api/v1/{tenantId}/&lt;aspectName&gt</a>;.
+By default the Aspect&#8217;s local name is used as path.
+The default path can be manipulated with the <code>--resource-path</code> switch.
+If the path is defined further, for example <code>--resource-path "/resources/{resourceId}"</code>, the resulting URL would be: <a href="https://www.example.org/api/v1/{tenantId}/resources/{resourceId}" class="bare">https://www.example.org/api/v1/{tenantId}/resources/{resourceId}</a>.</p>
 </div>
 <div class="paragraph">
 <p>It will be required to specify the parameter, in case there is an additional parameter defined.
 This has to be in JSON or in YAML, depending on the kind of specification chosen.
 For example:
-With the option <code>--aspect-resource-path "/resources/{resourceId}"</code> the generator constructs the URL <a href="https://www.example.org/api/v1/{tenantId}/resources/{resourceId}" class="bare">https://www.example.org/api/v1/{tenantId}/resources/{resourceId}</a>
-and then the <code>--aspect-parameter-file</code> defines the parameter resourceId in yaml:</p>
+With the option <code>--resource-path "/resources/{resourceId}"</code> the generator constructs the URL <a href="https://www.example.org/api/v1/{tenantId}/resources/{resourceId}" class="bare">https://www.example.org/api/v1/{tenantId}/resources/{resourceId}</a>
+and then the <code>--parameter-file</code> defines the parameter resourceId in yaml:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -374,8 +455,7 @@ and then the <code>--aspect-parameter-file</code> defines the parameter resource
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.2.jar -i <em>AspectModel.ttl</em> -oapi-yaml -baseUrl "https://www.example.org"
--arp "/resources/{resourceId}" -apf <em>fileLocation</em></code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-1.0.2.jar aspect <em>AspectModel.ttl</em> to openapi -b "https://www.example.org" -r "/resources/{resourceId}" -p <em>fileLocation</em></code></pre>
 </div>
 </div>
 </div>
@@ -384,20 +464,18 @@ and then the <code>--aspect-parameter-file</code> defines the parameter resource
 <h2 id="models-directory-structure"><a class="anchor" href="#models-directory-structure"></a>Understanding the models directory structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>An Aspect model file can contain an Aspect definition as well as other model elements that are defined in the same
-versioned namespace, as described in the <a href="../../bamm-specification/snapshot/namespaces.html" class="page">Namespaces section of the
-specification</a>. Additionally, it is possible to split one versioned namespace across multiple files, for example to
-define a Characteristic that is usable in multiple Aspects into its own file. In order for BAMM CLI to be able
-to resolve references to such externally defined model elements, the model files must be organized in a directory
-structure as follows:</p>
+<p>An Aspect model file can contain an Aspect definition as well as other model elements that are defined in the same versioned namespace, as described in the <a href="../../bamm-specification/snapshot/namespaces.html" class="page">Namespaces section of the
+specification</a>.
+Additionally, it is possible to split one versioned namespace across multiple files, for example to define a Characteristic that is usable in multiple Aspects into its own file.
+In order for BAMM CLI to be able to resolve references to such externally defined model elements, the model files must be organized in a directory structure as follows:</p>
 </div>
 <div class="paragraph">
 <p><code><em>namespace</em>/<em>version</em>/<em>name</em>.ttl</code></p>
 </div>
 <div class="paragraph">
 <p>where <em>namespace</em> corresponds to the hierarchical namespace that is part of the model element&#8217;s URN, e.g.
-<code>com.mycompany.myproduct</code> and <em>version</em> corresponds to the version of the namespace. The resulting directory structure
-then looks like the following:</p>
+<code>com.mycompany.myproduct</code> and <em>version</em> corresponds to the version of the namespace.
+The resulting directory structure then looks like the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -412,9 +490,9 @@ then looks like the following:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The name of the directory shown as <em>models root</em> above can be chosen freely. The BAMM CLI will resolve the file path
-relative to the input file by following the folder structure described above. Each of the files in the <code>1.0.0</code> directory
-should therefore have an empty prefix declaration such as <code>@prefix : &lt;urn:bamm:com.mycompany.myproduct:1.0.0#&gt;</code>.</p>
+<p>The name of the directory shown as <em>models root</em> above can be chosen freely.
+The BAMM CLI will resolve the file path relative to the input file by following the folder structure described above.
+Each of the files in the <code>1.0.0</code> directory should therefore have an empty prefix declaration such as <code>@prefix : &lt;urn:bamm:com.mycompany.myproduct:1.0.0#&gt;</code>.</p>
 </div>
 </div>
 </div>

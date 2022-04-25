@@ -224,6 +224,35 @@ as a return type instead has the advantage of enabling composable and better rea
 </div>
 </div>
 <div class="sect1">
+<h2 id="versioning"><a class="anchor" href="#versioning"></a>Getting the right version</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tooling can be made available in two different versions: <code>release</code> and <code>milestone</code>. The release version represents a stable version of the product
+and can be referenced in your projects in the usual way from the Maven Central repository. There is also the possibility to have the intermediate builds
+made available, these are called <code>milestone</code> builds. Instead of Maven Central, these are released via
+<a href="https://github.com/orgs/OpenManufacturingPlatform/packages?repo_name=sds-sdk">GitHub Packages</a> mechanism.<br>
+To be able to use the artifacts released in this way in your projects, first the right repository has to be added to your <code>pom.xml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+  &lt;repository&gt;
+	 &lt;id&gt;github&lt;/id&gt;
+	 &lt;name&gt;OpenManufacturingPlatform SDS-SDK&lt;/name&gt;
+	 &lt;url&gt;https://maven.pkg.github.com/OpenManufacturingPlatform/sds-sdk&lt;/url&gt;
+	 &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
+	 &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then the desired dependencies can be referenced in the usual way. For an example, please refer to
+<a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#installing-a-package">Github - Installing a package</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="parsing-aspect-model-urns"><a class="anchor" href="#parsing-aspect-model-urns"></a>Parsing Aspect Model URNs</h2>
 <div class="sectionbody">
 <div class="paragraph">
