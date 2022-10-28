@@ -74,9 +74,12 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../ame-guide/4.0.2/introduction.html">Aspect Model Editor</a>
+      <a class="title" href="../../ame-guide/4.1.0/introduction.html">Aspect Model Editor</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../ame-guide/4.1.0/introduction.html">4.1.0</a>
+        </li>
+        <li class="version">
           <a href="../../ame-guide/4.0.2/introduction.html">4.0.2</a>
         </li>
         <li class="version">
@@ -117,6 +120,18 @@
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.8/index.html">2.0.8</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.7/index.html">2.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.6/index.html">2.0.6</a>
+        </li>
+        <li class="version">
+          <a href="../2.0.5/index.html">2.0.5</a>
         </li>
         <li class="version">
           <a href="../2.0.4/index.html">2.0.4</a>
@@ -182,6 +197,10 @@
   <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
     <a class="version is-current" href="bamm-cli.html">master</a>
+    <a class="version" href="../2.0.8/tooling-guide/bamm-cli.html">2.0.8</a>
+    <a class="version" href="../2.0.7/tooling-guide/bamm-cli.html">2.0.7</a>
+    <a class="version" href="../2.0.6/tooling-guide/bamm-cli.html">2.0.6</a>
+    <a class="version" href="../2.0.5/tooling-guide/bamm-cli.html">2.0.5</a>
     <a class="version" href="../2.0.4/tooling-guide/bamm-cli.html">2.0.4</a>
     <a class="version" href="../2.0.3/tooling-guide/bamm-cli.html">2.0.3</a>
     <a class="version" href="../2.0.2/tooling-guide/bamm-cli.html">2.0.2</a>
@@ -219,6 +238,18 @@
 </td>
 <td class="content">
 Download latest version: <span class="icon"><i class="fa fa-download"></i></span> <a href="https://github.com/OpenManufacturingPlatform/sds-sdk/releases/download/v2.0.4/bamm-cli-2.0.4.jar">bamm-cli-2.0.4.jar</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For technical reasons, Java 11 is required to successfully run the tool.
 </td>
 </tr>
 </table>
@@ -292,9 +323,13 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect help validate</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aspect &lt;model&gt; validate</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; validate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Validate Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl validate</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl validate --custom-resolver myresolver.sh</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; prettyprint</p></td>
@@ -315,7 +350,7 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl migrate AspectModel.ttl -o c:\Results\MigratedModel.ttl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to html</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">aspect &lt;model&gt; to html</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate HTML documentation for an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html</code></p></td>
 </tr>
@@ -332,7 +367,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html -l de</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to png</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to html --custom-resolver myresolver.bat</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to png</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate PNG diagram for Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to png</code></p></td>
 </tr>
@@ -345,7 +384,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to svg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to png --custom-resolver resolver.jar</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to svg</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate SVG diagram for Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to svg</code></p></td>
 </tr>
@@ -358,7 +401,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to dot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to svg --custom-resolver "java -jar resolver.jar"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to dot</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate <a href="https://graphviz.org/doc/info/lang.html">DOT</a> diagram for Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to dot</code></p></td>
 </tr>
@@ -371,7 +418,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">aspect &lt;model&gt; to java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">aspect &lt;model&gt; to java</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate Java classes from an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to java</code></p></td>
 </tr>
@@ -400,7 +451,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="12"><p class="tableblock">aspect &lt;model&gt; to openapi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="13"><p class="tableblock">aspect &lt;model&gt; to openapi</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate <a href="https://spec.openapis.org/oas/v3.0.3">OpenAPI</a> specification for an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to openapi -j</code></p></td>
 </tr>
@@ -449,7 +504,16 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; to json</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : The language from the model for which an OpenAPI specification should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to openapi -l de</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to json</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate OpenAPI JSON specification for an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to json</code></p></td>
 </tr>
@@ -458,7 +522,11 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">aspect &lt;model&gt; to schema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to schema</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate JSON schema for an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to schema</code></p></td>
 </tr>
@@ -467,7 +535,16 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">aspect &lt;model&gt; to aas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--language, -l</em> : The language from the model for which a JSON schema should be generated (default: en)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to schema -l de</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">aspect &lt;model&gt; to aas</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generate Asset Administration Shell (AAS) submodel template for an Aspect Model</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bamm aspect AspectModel.ttl to aas</code></p></td>
 </tr>
@@ -479,8 +556,24 @@ The available options and their meaning can also be seen in the help text of the
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>--format, -f</em> : output file format (xml or aasx, default: xml)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>--custom-resolver</em> : use an external resolver for the resolution of the model elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="custom-model-resolver"><a class="anchor" href="#custom-model-resolver"></a>Custom model resolver</h3>
+<div class="paragraph">
+<p>To allow the users to provide their own custom implementations of a model resolver, <code>--custom-resolver</code> command-line switch can be used.
+The value of the switch can be any command which is directly executable by the underlying operating system (such as a batch script on Windows or a shell script on Linux/Unix).
+When a model element needs to be resolved, this command is executed with the URN of the element to resolve passed as the last parameter.
+The command can provide other parameters as well, the element URN will be added automatically as the last one by bamm-cli.
+The resolved model definition is expected to be output to the stdout in Turtle format.
+From there, it is read by the bamm-cli and passed on to the internal processing pipeline.
+In this way the extension can be flexibly done in any programming language/script language, including complex logic if necessary.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">

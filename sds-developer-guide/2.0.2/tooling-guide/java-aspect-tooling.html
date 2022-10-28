@@ -74,9 +74,12 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../ame-guide/4.0.2/introduction.html">Aspect Model Editor</a>
+      <a class="title" href="../../../ame-guide/4.1.0/introduction.html">Aspect Model Editor</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../../ame-guide/4.1.0/introduction.html">4.1.0</a>
+        </li>
+        <li class="version">
           <a href="../../../ame-guide/4.0.2/introduction.html">4.0.2</a>
         </li>
         <li class="version">
@@ -117,6 +120,18 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0.8/index.html">2.0.8</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0.7/index.html">2.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0.6/index.html">2.0.6</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0.5/index.html">2.0.5</a>
         </li>
         <li class="version">
           <a href="../../2.0.4/index.html">2.0.4</a>
@@ -182,6 +197,10 @@
   <button class="version-menu-toggle" title="Show other versions of page">2.0.2</button>
   <div class="version-menu">
     <a class="version" href="../../tooling-guide/java-aspect-tooling.html">master</a>
+    <a class="version" href="../../2.0.8/tooling-guide/java-aspect-tooling.html">2.0.8</a>
+    <a class="version" href="../../2.0.7/tooling-guide/java-aspect-tooling.html">2.0.7</a>
+    <a class="version" href="../../2.0.6/tooling-guide/java-aspect-tooling.html">2.0.6</a>
+    <a class="version" href="../../2.0.5/tooling-guide/java-aspect-tooling.html">2.0.5</a>
     <a class="version" href="../../2.0.4/tooling-guide/java-aspect-tooling.html">2.0.4</a>
     <a class="version" href="../../2.0.3/tooling-guide/java-aspect-tooling.html">2.0.3</a>
     <a class="version is-current" href="java-aspect-tooling.html">2.0.2</a>
@@ -1128,7 +1147,7 @@ final Aspect aspect = ...
 
 // Generate the JSON Schema
 final AspectModelJsonSchemaGenerator generator = new AspectModelJsonSchemaGenerator();
-final JsonNode jsonSchema = generator.apply( aspect );
+final JsonNode jsonSchema = generator.apply( aspect, Locale.ENGLISH );
 
 // If needed, print or pretty print it into a string
 final ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -1760,7 +1779,7 @@ Java classes.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
-    &lt;artifactId&gt;aspect-meta-model&lt;/artifactId&gt;
+    &lt;artifactId&gt;sds-aspect-meta-model&lt;/artifactId&gt;
     &lt;version&gt;2.0.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
@@ -1774,7 +1793,7 @@ Java classes.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:aspect-meta-model:2.0.0'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-meta-model:2.0.0'</code></pre>
 </div>
 </div>
 </div>
@@ -1786,7 +1805,7 @@ Java classes.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:aspect-meta-model:2.0.0")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-meta-model:2.0.0")</code></pre>
 </div>
 </div>
 </div>
