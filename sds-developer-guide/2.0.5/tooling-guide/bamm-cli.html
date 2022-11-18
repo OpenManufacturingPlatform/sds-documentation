@@ -74,9 +74,12 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../ame-guide/4.1.0/introduction.html">Aspect Model Editor</a>
+      <a class="title" href="../../../ame-guide/4.2.0/introduction.html">Aspect Model Editor</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../../ame-guide/4.2.0/introduction.html">4.2.0</a>
+        </li>
+        <li class="version">
           <a href="../../../ame-guide/4.1.0/introduction.html">4.1.0</a>
         </li>
         <li class="version">
@@ -108,6 +111,14 @@
       </ul>
     </li>
     <li class="component">
+      <a class="title" href="../../../python-sdk-guide/index.html">Python SDK Guide</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python-sdk-guide/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
       <a class="title" href="../../../sds-documentation/index.html">SDS Documentation</a>
       <ul class="versions">
         <li class="version is-latest">
@@ -120,6 +131,9 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1.0/index.html">2.1.0</a>
         </li>
         <li class="version">
           <a href="../../2.0.8/index.html">2.0.8</a>
@@ -197,6 +211,7 @@
   <button class="version-menu-toggle" title="Show other versions of page">2.0.5</button>
   <div class="version-menu">
     <a class="version" href="../../tooling-guide/bamm-cli.html">master</a>
+    <a class="version" href="../../2.1.0/tooling-guide/bamm-cli.html">2.1.0</a>
     <a class="version" href="../../2.0.8/tooling-guide/bamm-cli.html">2.0.8</a>
     <a class="version" href="../../2.0.7/tooling-guide/bamm-cli.html">2.0.7</a>
     <a class="version" href="../../2.0.6/tooling-guide/bamm-cli.html">2.0.6</a>
@@ -237,7 +252,7 @@
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Download latest version: <span class="icon"><i class="fa fa-download"></i></span> <a href="https://github.com/OpenManufacturingPlatform/sds-sdk/releases/download/v2.0.8/bamm-cli-2.0.8.jar">bamm-cli-2.0.8.jar</a>
+Download latest version: <span class="icon"><i class="fa fa-download"></i></span> <a href="https://github.com/OpenManufacturingPlatform/sds-sdk/releases/download/v2.1.0/bamm-cli-2.1.0.jar">bamm-cli-2.1.0.jar</a>
 </td>
 </tr>
 </table>
@@ -248,7 +263,7 @@ Download latest version: <span class="icon"><i class="fa fa-download"></i></span
 <h2 id="bamm-cli-getting-started"><a class="anchor" href="#bamm-cli-getting-started"></a>Running the BAMM CLI</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For the executable jar, call <code>java -jar bamm-cli-2.0.8.jar</code> followed by one of the following subcommands (e.g., <code>java -jar bamm-cli-2.0.8.jar help</code>).
+<p>For the executable jar, call <code>java -jar bamm-cli-2.1.0.jar</code> followed by one of the following subcommands (e.g., <code>java -jar bamm-cli-2.1.0.jar help</code>).
 In the following sections, <code>bamm</code> will be used as the command name.</p>
 </div>
 <div class="admonitionblock tip">
@@ -264,7 +279,7 @@ For example, for Bash, you could add the following line to <code>.bashrc</code>:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">alias bamm='java -jar /location/to/bamm-cli-2.0.8.jar'</code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">alias bamm='java -jar /location/to/bamm-cli-2.1.0.jar'</code></pre>
 </div>
 </div>
 </td>
@@ -536,7 +551,7 @@ and then the <code>--parameter-file</code> defines the parameter resourceId in y
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-2.0.8.jar aspect <em>AspectModel.ttl</em> to openapi -b "https://www.example.org" -r "/resources/{resourceId}" -p <em>fileLocation</em></code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">java -jar bamm-cli-2.1.0.jar aspect <em>AspectModel.ttl</em> to openapi -b "https://www.example.org" -r "/resources/{resourceId}" -p <em>fileLocation</em></code></pre>
 </div>
 </div>
 </div>

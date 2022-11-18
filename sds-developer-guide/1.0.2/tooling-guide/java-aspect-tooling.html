@@ -65,9 +65,12 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../ame-guide/4.1.0/introduction.html">Aspect Model Editor</a>
+      <a class="title" href="../../../ame-guide/4.2.0/introduction.html">Aspect Model Editor</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../../ame-guide/4.2.0/introduction.html">4.2.0</a>
+        </li>
+        <li class="version">
           <a href="../../../ame-guide/4.1.0/introduction.html">4.1.0</a>
         </li>
         <li class="version">
@@ -99,6 +102,14 @@
       </ul>
     </li>
     <li class="component">
+      <a class="title" href="../../../python-sdk-guide/index.html">Python SDK Guide</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../python-sdk-guide/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
       <a class="title" href="../../../sds-documentation/index.html">SDS Documentation</a>
       <ul class="versions">
         <li class="version is-latest">
@@ -111,6 +122,9 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1.0/index.html">2.1.0</a>
         </li>
         <li class="version">
           <a href="../../2.0.8/index.html">2.0.8</a>
@@ -188,6 +202,7 @@
   <button class="version-menu-toggle" title="Show other versions of page">1.0.2</button>
   <div class="version-menu">
     <a class="version" href="../../tooling-guide/java-aspect-tooling.html">master</a>
+    <a class="version" href="../../2.1.0/tooling-guide/java-aspect-tooling.html">2.1.0</a>
     <a class="version" href="../../2.0.8/tooling-guide/java-aspect-tooling.html">2.0.8</a>
     <a class="version" href="../../2.0.7/tooling-guide/java-aspect-tooling.html">2.0.7</a>
     <a class="version" href="../../2.0.6/tooling-guide/java-aspect-tooling.html">2.0.6</a>
@@ -237,7 +252,7 @@ respective subsection), <em>or</em> you can use the <code>aspect-model-starter</
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-starter&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -250,7 +265,7 @@ respective subsection), <em>or</em> you can use the <code>aspect-model-starter</
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-starter:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-starter:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -262,7 +277,7 @@ respective subsection), <em>or</em> you can use the <code>aspect-model-starter</
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-starter:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-starter:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -317,7 +332,7 @@ System.out.println( urn.getUrnPrefix() ); // urn:bamm:com.example:1.0.0#</code><
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-urn&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -330,7 +345,7 @@ System.out.println( urn.getUrnPrefix() ); // urn:bamm:com.example:1.0.0#</code><
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-urn:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-urn:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -342,7 +357,7 @@ System.out.println( urn.getUrnPrefix() ); // urn:bamm:com.example:1.0.0#</code><
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-urn:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-urn:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -561,7 +576,7 @@ new AspectModelResolver()
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-resolver&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -574,7 +589,7 @@ new AspectModelResolver()
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-resolver:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-resolver:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -586,7 +601,7 @@ new AspectModelResolver()
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-resolver:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-resolver:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -659,7 +674,7 @@ new AspectModelResolver()
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-meta-model-java&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -672,7 +687,7 @@ new AspectModelResolver()
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-meta-model-java:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-meta-model-java:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -684,7 +699,7 @@ new AspectModelResolver()
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-meta-model-java:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-meta-model-java:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -749,7 +764,7 @@ prettyPrinter.print();</code></pre>
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-serializer&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -762,7 +777,7 @@ prettyPrinter.print();</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-serializer:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-serializer:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -774,7 +789,7 @@ prettyPrinter.print();</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-serializer:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-serializer:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -884,7 +899,7 @@ Aspect model contract) and processing errors (e.g., a file could not be accessed
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-validator&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -897,7 +912,7 @@ Aspect model contract) and processing errors (e.g., a file could not be accessed
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-validator:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-validator:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -909,7 +924,7 @@ Aspect model contract) and processing errors (e.g., a file could not be accessed
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-validator:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-validator:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -941,7 +956,7 @@ following dependency:</p>
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-document-generators&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -954,7 +969,7 @@ following dependency:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-document-generators:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-document-generators:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -966,7 +981,7 @@ following dependency:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-document-generators:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-document-generators:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -1249,7 +1264,7 @@ the information itself (<em>meta</em>).</p>
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-model-java-generator&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -1262,7 +1277,7 @@ the information itself (<em>meta</em>).</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-java-generator:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-model-java-generator:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -1274,7 +1289,7 @@ the information itself (<em>meta</em>).</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-java-generator:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-model-java-generator:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -1510,7 +1525,7 @@ generator.generate( this::outputStreamForName );</code></pre>
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-static-meta-model-java&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -1523,7 +1538,7 @@ generator.generate( this::outputStreamForName );</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-static-meta-model-java:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-static-meta-model-java:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -1535,7 +1550,7 @@ generator.generate( this::outputStreamForName );</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-static-meta-model-java:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-static-meta-model-java:2.1.0")</code></pre>
 </div>
 </div>
 </div>
@@ -1628,7 +1643,7 @@ final Try&lt;VersionedModel&gt; updatedModel2 =
 <pre class="highlightjs highlight"><code class="language-maven hljs" data-lang="maven">&lt;dependency&gt;
     &lt;groupId&gt;io.openmanufacturing&lt;/groupId&gt;
     &lt;artifactId&gt;sds-aspect-meta-model-version-migrator&lt;/artifactId&gt;
-    &lt;version&gt;2.0.8&lt;/version&gt;
+    &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -1641,7 +1656,7 @@ final Try&lt;VersionedModel&gt; updatedModel2 =
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-meta-model-version-migrator:2.0.8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation 'io.openmanufacturing:sds-aspect-meta-model-version-migrator:2.1.0'</code></pre>
 </div>
 </div>
 </div>
@@ -1653,7 +1668,7 @@ final Try&lt;VersionedModel&gt; updatedModel2 =
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-meta-model-version-migrator:2.0.8")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.openmanufacturing:sds-aspect-meta-model-version-migrator:2.1.0")</code></pre>
 </div>
 </div>
 </div>
