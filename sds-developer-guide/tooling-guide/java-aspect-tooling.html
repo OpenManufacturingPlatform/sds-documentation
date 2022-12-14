@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Java Tooling for Working with Aspect Models :: Open Manufacturing Platform - Semantic Data Structuring Working Group</title>
-    <link rel="canonical" href="https://openmanufacturingplatform.github.io/sds-documentation/sds-developer-guide/tooling-guide/java-aspect-tooling.html">
+    <title>Java Tooling for Working with Aspect Models :: OMP - SDS WG continues in Eclipse Semantic Modeling Framework (ESMF)</title>
+    <link rel="canonical" href="https://projects.eclipse.org/projects/dt.esmf/sds-developer-guide/tooling-guide/java-aspect-tooling.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -13,11 +13,11 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://openmanufacturingplatform.github.io/sds-documentation">
+      <a class="navbar-item" href="https://projects.eclipse.org/projects/dt.esmf">
         <div class="logo-headline-wrapper">
           <img class="logo" src="../../_/img/omp-logo.png" />
           <span class="docu-title">
-            Open Manufacturing Platform - Semantic Data Structuring Working Group
+            OMP - SDS WG continues in Eclipse Semantic Modeling Framework (ESMF)
           </span>
         </div>
       </a>
@@ -74,9 +74,12 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../ame-guide/4.2.0/introduction.html">Aspect Model Editor</a>
+      <a class="title" href="../../ame-guide/4.2.1/introduction.html">Aspect Model Editor</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../ame-guide/4.2.1/introduction.html">4.2.1</a>
+        </li>
+        <li class="version">
           <a href="../../ame-guide/4.2.0/introduction.html">4.2.0</a>
         </li>
         <li class="version">
@@ -332,6 +335,33 @@ To be able to use the artifacts released in this way in your projects, first the
 <div class="paragraph">
 <p>Then the desired dependencies can be referenced in the usual way. For an example, please refer to
 <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#installing-a-package">Github - Installing a package</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jdk-requirements"><a class="anchor" href="#jdk-requirements"></a>JDK requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The sds-sdk components are built with Java 17 and require a JDK &gt;= 17 such as
+<a href="https://adoptium.net/">Adoptium Temurin</a>.</p>
+</div>
+<div class="paragraph">
+<p>The sds-sdk can also be used with a Java 17-compatible <a href="https://www.graalvm.org/">GraalVM JDK</a>. With
+GraalVM you need to make the Graal JavaScript component available, as parts of the SDK such as the
+Aspect Model validation component require embedded JavaScript execution:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For using the sds-sdk in the GraalVM itself, install the JS component using the
+<a href="https://www.graalvm.org/22.3/reference-manual/js/">GraalVM Updater</a>: <code>gu install js</code></p>
+</li>
+<li>
+<p>For using the sds-sdk with GraalVM <code>native-image</code>, be sure to use the <code>--language:js</code> option when
+building the native image; for more information see
+<a href="https://www.graalvm.org/22.3/reference-manual/polyglot-programming/">polyglot programming</a>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

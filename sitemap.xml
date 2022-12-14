@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
-<loc>https://openmanufacturingplatform.github.io/sds-documentation/sitemap-ame-guide.xml</loc>
+<loc>https://projects.eclipse.org/projects/dt.esmf/sitemap-ame-guide.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://openmanufacturingplatform.github.io/sds-documentation/sitemap-bamm-specification.xml</loc>
+<loc>https://projects.eclipse.org/projects/dt.esmf/sitemap-bamm-specification.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://openmanufacturingplatform.github.io/sds-documentation/sitemap-python-sdk-guide.xml</loc>
+<loc>https://projects.eclipse.org/projects/dt.esmf/sitemap-python-sdk-guide.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://openmanufacturingplatform.github.io/sds-documentation/sitemap-sds-developer-guide.xml</loc>
+<loc>https://projects.eclipse.org/projects/dt.esmf/sitemap-sds-developer-guide.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://openmanufacturingplatform.github.io/sds-documentation/sitemap-sds-documentation.xml</loc>
+<loc>https://projects.eclipse.org/projects/dt.esmf/sitemap-sds-documentation.xml</loc>
 </sitemap>
 </sitemapindex>
